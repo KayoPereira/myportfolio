@@ -93,7 +93,6 @@ export async function getRepositoryStats(): Promise<{
     private: allRepos.filter(repo => repo.visibility === 'private').length
   }
 
-  console.log('Repository Stats:', stats)
   return stats
 }
 
@@ -133,8 +132,6 @@ export async function fetchFeaturedRepositories(includeForks: boolean = false): 
 
   // Combinar: projetos em destaque primeiro, depois outros até completar 6
   const result = [...sortedPriorityRepos, ...sortedOtherRepos].slice(0, 6)
-
-  console.log(`Featured repositories (${result.length}):`, result.map(r => r.name))
 
   return result
 }

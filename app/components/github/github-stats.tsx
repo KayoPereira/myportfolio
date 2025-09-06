@@ -55,10 +55,7 @@ interface LanguageBarProps {
 
 function LanguageBar({ languages, delay = 0 }: LanguageBarProps) {
   const total = Object.values(languages).reduce((sum, count) => sum + count, 0)
-  const sortedLanguages = Object.entries(languages)
-    .sort(([,a], [,b]) => b - a) // Todas as linguagens, ordenadas por uso
-
-  console.log(sortedLanguages)
+  const sortedLanguages = Object.entries(languages).sort(([,a], [,b]) => b - a)
 
   const languageColors: { [key: string]: string } = {
     'JavaScript': '#f1e05a',

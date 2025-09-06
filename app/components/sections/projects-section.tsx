@@ -119,7 +119,7 @@ export function ProjectsSection() {
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Code2 className="w-8 h-8 text-white" />
                 </div>
-                <h4 className={`text-lg font-semibold text-gray-900 ${theme === 'dark' ? 'text-white' : 'text-gray-900'} mb-2`}>
+                <h4 className={`text-lg font-semibold text-gray-900 ${mounted && theme === 'dark' ? 'text-white' : 'text-gray-900'} mb-2`}>
                   Código Aberto
                 </h4>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
@@ -133,7 +133,7 @@ export function ProjectsSection() {
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-8 h-8 text-white" />
                 </div>
-                <h4 className={`text-lg font-semibold text-gray-900 ${theme === 'dark' ? 'text-white' : 'text-gray-900'} mb-2`}>
+                <h4 className={`text-lg font-semibold text-gray-900 ${mounted && theme === 'dark' ? 'text-white' : 'text-gray-900'} mb-2`}>
                   Sempre Aprendendo
                 </h4>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
@@ -147,7 +147,7 @@ export function ProjectsSection() {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Zap className="w-8 h-8 text-white" />
                 </div>
-                <h4 className={`text-lg font-semibold text-gray-900 ${theme === 'dark' ? 'text-white' : 'text-gray-900'} mb-2`}>
+                <h4 className={`text-lg font-semibold text-gray-900 ${mounted && theme === 'dark' ? 'text-white' : 'text-gray-900'} mb-2`}>
                   Soluções Eficientes
                 </h4>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">

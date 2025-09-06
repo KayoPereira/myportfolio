@@ -7,12 +7,12 @@ export const personalInfo: PersonalInfo = {
   avatar: "/images/profile.jpg",
   resumeUrl: "/cv - kayo pereira.pdf",
   contact: {
-    email: "kayo@exemplo.com",
-    phone: "+55 (81) 99999-9999",
+    email: "kayo.pereira.dev@gmail.com",
+    phone: "+55 (81) 98238-6533",
     location: "Recife, PE - Brasil",
     linkedin: "https://linkedin.com/in/kayopereira",
     github: "https://github.com/KayoPereira",
-    website: "https://kayopereira.dev"
+    website: "https://kayo.devrec.com.br"
   }
 }
 

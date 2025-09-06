@@ -9,7 +9,6 @@ import {
   Eye,
   Calendar,
   Code,
-  Loader2,
   AlertCircle
 } from 'lucide-react'
 import { CardSkeleton } from '@/app/components/ui/error-boundary'
@@ -161,12 +160,13 @@ interface RepositoryListProps {
   limit?: number
 }
 
-export function RepositoryList({ 
-  title = "Repositórios em Destaque", 
-  showAll = false,
-  limit = 6 
+export function RepositoryList({
+  title = "Repositórios em Destaque",
+  showAll = true,
+  limit = 6
 }: RepositoryListProps) {
   const { repositories, loading, error, refetch } = useGitHubFeaturedRepos()
+  const { theme } = useTheme()
 
   if (loading) {
     return (
@@ -210,9 +210,7 @@ export function RepositoryList({
     )
   }
 
-  showAll = true
   const displayedRepos = showAll ? repositories : repositories.slice(0, limit)
-  const { theme } = useTheme()
 
   return (
     <div className="space-y-8">

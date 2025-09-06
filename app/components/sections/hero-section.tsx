@@ -95,6 +95,7 @@ export function HeroSection() {
                     contactSection.scrollIntoView({ behavior: 'smooth' })
                   }
                 }}
+                style={{ cursor: 'pointer' }}
               >
                 <Mail className="w-5 h-5 mr-2" />
                 Entre em Contato
