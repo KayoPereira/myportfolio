@@ -104,7 +104,6 @@ export function ExperienceSection() {
     >
     <Section id="experience">
       <div className="max-w-4xl mx-auto">
-        {/* Section Header */}
         <div className="text-center mb-16">
           <FadeIn delay={0.1}>
             <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${mounted && theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -118,12 +117,9 @@ export function ExperienceSection() {
           </FadeIn>
         </div>
 
-        {/* Timeline */}
         <div className="relative">
-          {/* Timeline Line */}
           <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-purple-500"></div>
 
-          {/* Experience Items */}
           <div className="space-y-12">
             {experiences.map((exp, index) => (
               <FadeIn key={exp.id} delay={0.4 + index * 0.2}>
@@ -132,16 +128,13 @@ export function ExperienceSection() {
                   whileHover={{ x: 4 }}
                   transition={{ duration: 0.2 }}
                 >
-                  {/* Timeline Dot */}
                   <div className="relative z-10 flex-shrink-0">
                     <div className="w-4 h-4 bg-blue-500 rounded-full border-4 border-white dark:border-gray-900 shadow-lg"></div>
                   </div>
 
-                  {/* Content Card */}
                   <div className="flex-1 bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
                       <div className="flex items-start gap-4">
-                        {/* Company Logo */}
                         {exp.logo ? (
                           <div className="flex-shrink-0 w-12 h-12 bg-white dark:bg-gray-700 rounded-lg p-2 border border-gray-200 dark:border-gray-600">
                             <Image
@@ -203,7 +196,6 @@ export function ExperienceSection() {
                       {exp.description}
                     </p>
 
-                    {/* Technologies */}
                     <div className="flex flex-wrap gap-2">
                       {exp.technologies.map((tech, techIndex) => (
                         <span
