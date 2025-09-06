@@ -32,7 +32,7 @@ const skillCategories: SkillCategory[] = [
       { name: "Ruby", level: 95, category: "backend", color: "bg-red-600" },
       { name: "Python", level: 80, category: "backend", color: "bg-yellow-500" },
       { name: "Golang", level: 65, category: "backend", color: "bg-blue-500" },
-      { name: "Node.js", level: 80, category: "backend", color: "bg-green-500" },
+      { name: "Testes unitários", level: 70, category: "backend", color: "bg-green-500" },
       { name: "PostgreSQL", level: 85, category: "backend", color: "bg-blue-600" },
       { name: "MySQL", level: 80, category: "backend", color: "bg-orange-500" },
       { name: "Redis", level: 75, category: "backend", color: "bg-red-700" }

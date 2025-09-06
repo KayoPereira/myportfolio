@@ -220,31 +220,6 @@ export function ExperienceSection() {
             ))}
           </div>
         </div>
-
-        {/* Call to Action */}
-        <FadeIn delay={1.4}>
-          <div className="text-center mt-16 p-8 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl border border-blue-200 dark:border-blue-800">
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-              Interessado em trabalhar comigo?
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Estou sempre aberto a novos desafios e oportunidades interessantes.
-            </p>
-            <motion.button
-              className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => {
-                const contactSection = document.getElementById('contact')
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: 'smooth' })
-                }
-              }}
-            >
-              Entre em Contato
-            </motion.button>
-          </div>
-        </FadeIn>
       </div>
     </Section>
     </div>
