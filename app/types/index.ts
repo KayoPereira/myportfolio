@@ -72,3 +72,63 @@ export interface AnimationProps {
   direction?: 'up' | 'down' | 'left' | 'right'
   once?: boolean
 }
+
+export interface GitHubRepository {
+  id: number
+  name: string
+  full_name: string
+  description: string | null
+  html_url: string
+  homepage: string | null
+  language: string | null
+  stargazers_count: number
+  watchers_count: number
+  forks_count: number
+  open_issues_count: number
+  created_at: string
+  updated_at: string
+  pushed_at: string
+  size: number
+  topics: string[]
+  visibility: 'public' | 'private'
+  archived: boolean
+  disabled: boolean
+  fork: boolean
+}
+
+export interface GitHubUser {
+  login: string
+  id: number
+  avatar_url: string
+  html_url: string
+  name: string | null
+  company: string | null
+  blog: string | null
+  location: string | null
+  email: string | null
+  bio: string | null
+  public_repos: number
+  public_gists: number
+  followers: number
+  following: number
+  created_at: string
+  updated_at: string
+}
+
+export interface GitHubStats {
+  totalRepos: number
+  totalStars: number
+  totalForks: number
+  totalCommits?: number
+  languages: { [key: string]: number }
+  mostUsedLanguage: string
+  publicRepos: number
+  followers: number
+  following: number
+}
+
+export interface GitHubApiError {
+  message: string
+  status: number
+  documentation_url?: string
+}
