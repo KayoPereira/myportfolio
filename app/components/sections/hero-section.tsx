@@ -7,6 +7,7 @@ import { Button } from '@/app/components/ui/button'
 import { Section } from '@/app/components/ui/section'
 import { AnimatedText, FadeIn } from '@/app/components/ui/animated-text'
 import { personalInfo } from '@/app/data/profile'
+import Image from 'next/image'
 
 export function HeroSection() {
   const scrollToNext = () => {
@@ -36,16 +37,17 @@ export function HeroSection() {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="w-full h-full rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center text-4xl md:text-5xl font-bold text-primary-foreground shadow-2xl">
-                {personalInfo.name.split(' ').map(n => n[0]).join('')}
+              <div className="w-full h-full rounded-full overflow-hidden shadow-2xl border-2 border-blue-500">
+                <Image
+                  src={personalInfo.avatar || "/images/profile.jpg"}
+                  alt={personalInfo.name}
+                  width={200}
+                  height={200}
+                  className="w-full h-full object-cover"
+                  priority
+                />
               </div>
               
-              {/* Animated Ring */}
-              <motion.div
-                className="absolute inset-0 rounded-full border-2 border-primary/30"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              />
             </motion.div>
           </FadeIn>
 
