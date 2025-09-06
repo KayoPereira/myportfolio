@@ -40,7 +40,7 @@ export default function RootLayout({
       <body className={inter.variable}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem={true}
           disableTransitionOnChange={false}
         >

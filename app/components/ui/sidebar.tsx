@@ -338,7 +338,7 @@ function SidebarContent({ activeSection, onNavigate, onClose, isDark, isCollapse
             "text-xs text-center transition-opacity duration-300",
             isDark ? "text-gray-400" : "text-gray-500"
           )}>
-            © 2024 {personalInfo.name}
+            © {new Date().getFullYear()} {personalInfo.name}
           </p>
         )}
       </div>
