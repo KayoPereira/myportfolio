@@ -28,7 +28,7 @@ const experiences: Experience[] = [
     company: "4MDG",
     position: "Backend Developer",
     startDate: "Jul 2024",
-    description: "Fundação e liderança técnica de uma software house focada em soluções sob medida. Desenvolvimento de aplicações web completas, consultoria em tecnologia e gestão de equipe de desenvolvimento.",
+    description: "Desenvolvimento e manutenção de APIs escaláveis com Ruby on Rails, modelagem e otimização de bancos de dados PostgreSQL, além de testes automatizados com RSpec. Experiência em autenticação, segurança, integração de serviços externos e monitoramento de aplicações em produção. Atuação colaborativa em equipes multidisciplinares, assegurando qualidade, desempenho e valor ao usuário final.",
     technologies: ["Ruby on Rails", "Ruby", "PostgreSQL", "Docker", "AWS"],
     location: "São Paulo, SP - Remoto",
     type: "full-time",
@@ -40,8 +40,8 @@ const experiences: Experience[] = [
     company: "Le Wagon",
     position: "Teacher",
     startDate: "Dez 2021",
-    description: "Bootcamp de desenvolvimento web full-stack. Ensino de programação Ruby e Ruby on Rails para desenvolvedores iniciantes. Acompanhamento da evolução de alunos em projetos práticos e mentoria técnica.",
-    technologies: ["Ruby on Rails", "Ruby", "JavaScript", "Vue.js", "Heroku"],
+    description: "Ministro aulas de Ruby, Rails, bancos de dados, HTML, CSS e JavaScript, com foco em POO e boas práticas. Acompanho e oriento alunos em projetos práticos, promovendo aplicação real dos conceitos. Realizo avaliações contínuas e forneço feedback para o desenvolvimento técnico individual.",
+    technologies: ["Ruby on Rails", "Ruby", "Stimulus", "JavaScript", "Vue.js", "Heroku", "Mustache.js"],
     location: "São Paulo, SP - Remoto",
     type: "part-time",
     website: "https://www.lewagon.com",
@@ -53,7 +53,7 @@ const experiences: Experience[] = [
     position: "Software Engineer",
     startDate: "Jun 2023",
     endDate: "Mai 2024",
-    description: "Desenvolvimento de sistemas web complexos e APIs robustas. Liderança técnica de projetos e mentoria de desenvolvedores júnior.",
+    description: "Atuação no desenvolvimento de soluções completas, desde a concepção até a entrega, com foco em planejamento tecnológico, modelagem de bancos de dados e setup de ambientes. Experiência em metodologias ágeis, liderando cerimônias Scrum e organizando tarefas da equipe. Responsável também pela seleção e alocação de membros, garantindo times qualificados e produtivos.",
     technologies: ["Ruby on Rails", "Ruby", "Next.js", "PostgreSQL", "AWS"],
     location: "São Paulo, SP - Remoto",
     type: "full-time",
@@ -66,7 +66,7 @@ const experiences: Experience[] = [
     position: "Full Stack Developer",
     startDate: "Fev 2022",
     endDate: "Mai 2023",
-    description: "Desenvolvimento de MVP e features para plataforma de e-commerce. Trabalho em equipe ágil com foco em entrega rápida e qualidade.",
+    description: "Atuação como desenvolvedor full-stack, implementando funcionalidades em Ruby on Rails no backend e React no frontend. Responsável por revisão de pull requests, garantindo qualidade e consistência do código. Colaboração ativa com a equipe, oferecendo suporte técnico e promovendo um ambiente de trabalho cooperativo.",
     technologies: ["Ruby on Rails", "Ruby", "React", "PostgreSQL", "Sidekiq", "Heroku", "AWS"],
     location: "São Paulo, SP - Remoto",
     type: "full-time",
@@ -79,7 +79,7 @@ const experiences: Experience[] = [
     position: "Full Stack Developer",
     startDate: "Mai 2021",
     endDate: "Fev 2022",
-    description: "Desenvolvimento de sites e sistemas web para diversos clientes. Especialização em Ruby on Rails e consultoria técnica.",
+    description: "Experiência em software house com desenvolvimento de projetos para múltiplos setores, como saúde, educação, pets e entregas. Atuação full-stack, implementando funcionalidades em Ruby on Rails no backend e React no frontend.",
     technologies: ["Ruby on Rails", "Ruby", "JavaScript", "React", "Bootstrap", "MySQL", "PostgreSQL"],
     location: "São Paulo, SP - Remoto",
     type: "full-time",
@@ -89,20 +89,25 @@ const experiences: Experience[] = [
 
 export function ExperienceSection() {
   const { theme } = useTheme()
+  const [mounted, setMounted] = React.useState(false)
+
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
 
   return (
     <div
-      className="min-h-screen"
-      style={{
+      className="min-h-screen bg-gray-50 dark:bg-slate-900"
+      style={mounted ? {
         backgroundColor: theme === 'dark' ? '#0f172a' : '#f8fafc'
-      }}
+      } : undefined}
     >
     <Section id="experience">
-      <div className="max-w-4xl mx-auto bg-muted/20">
+      <div className="max-w-4xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
           <FadeIn delay={0.1}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+            <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${mounted && theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
               Experiência Profissional
             </h2>
           </FadeIn>
