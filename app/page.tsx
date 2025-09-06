@@ -1,19 +1,12 @@
 import { MainLayout } from '@/app/components/layout/main-layout'
 import { HeroSection } from '@/app/components/sections/hero-section'
+import { ExperienceSection } from '@/app/components/sections/experience-section'
 
 export default function Home() {
   return (
     <MainLayout>
       <HeroSection />
-
-      {/* Placeholder sections - will be implemented next */}
-      <div id="about" className="min-h-screen flex items-center justify-center bg-muted/20">
-        <h2 className="text-4xl font-bold">Sobre Mim - Em breve</h2>
-      </div>
-
-      <div id="experience" className="min-h-screen flex items-center justify-center">
-        <h2 className="text-4xl font-bold">Experiência - Em breve</h2>
-      </div>
+      <ExperienceSection />
 
       <div id="skills" className="min-h-screen flex items-center justify-center bg-muted/20">
         <h2 className="text-4xl font-bold">Habilidades - Em breve</h2>

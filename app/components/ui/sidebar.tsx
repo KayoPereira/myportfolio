@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useTheme } from 'next-themes'
 import {
   Home,
-  User,
   Briefcase,
   Code,
   FolderOpen,
@@ -31,7 +30,6 @@ interface SidebarProps {
 
 const navigationItems = [
   { id: 'home', label: 'Início', icon: Home, href: '#home' },
-  { id: 'about', label: 'Sobre', icon: User, href: '#about' },
   { id: 'experience', label: 'Experiência', icon: Briefcase, href: '#experience' },
   { id: 'skills', label: 'Habilidades', icon: Code, href: '#skills' },
   { id: 'projects', label: 'Projetos', icon: FolderOpen, href: '#projects' },
