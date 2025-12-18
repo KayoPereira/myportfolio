@@ -3,7 +3,7 @@ import { PersonalInfo, Experience, Skill, Project } from '@/app/types'
 export const personalInfo: PersonalInfo = {
   name: "Kayo Pereira",
   title: "Desenvolvedor Full Stack & Professor de Ruby",
-  bio: "Desenvolvedor de Software e Professor de Programação Ruby, com mais de 5 anos de experiência no mercado, atuando no desenvolvimento de aplicações web e APIs robustas, escaláveis e seguras. Fundador da DevRec, uma software house em Recife, com foco em soluções sob medida e consultoria em tecnologia.",
+  bio: "Desenvolvedor de Software e Professor de Programação Ruby, com mais de 5 anos de experiência no mercado, atuando no desenvolvimento de aplicações web e APIs robustas, escaláveis e seguras.",
   avatar: "/images/profile.jpg",
   resumeUrl: "/cv - kayo pereira.pdf",
   contact: {
